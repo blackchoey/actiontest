@@ -15,6 +15,6 @@ jobs:
 
     steps:
     - run: npm install -g @microsoft/teamsfx-cli@${{ matrix.cli-version }}
-    - run: teamsfx new --capabilities ${{ matrix.capabilities }} --programming-language ${{ matrix.language }} --interactive false
+    - run: teamsfx new --app-name migrationtest --capabilities ${{ matrix.capabilities }} --programming-language ${{ matrix.language }} --interactive false
     - run: npm install -g @microsoft/teamsfx-cli@alpha
     - run: teamsfx upgrade --force
